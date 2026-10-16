@@ -1,0 +1,53 @@
+{
+  "name": "secure-compress",
+  "productName": "Secure Compress",
+  "version": "1.0.1",
+  "description": "Compress PDFs and convert between Word and PDF — privately, on your own device.",
+  "author": "Muhammad Mustapha Ibrahim",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.securecompress.desktop",
+    "productName": "Secure Compress",
+    "copyright": "Copyright © Muhammad Mustapha Ibrahim. All Rights Reserved.",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "package.json",
+      "app/**/*",
+      "build/icon.png"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Secure Compress",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "artifactName": "Secure-Compress-Setup.exe"
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  }
+}
