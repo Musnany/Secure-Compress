@@ -14,6 +14,6 @@ The installer is written to `dist/Secure-Compress-Setup.exe`.
 
 ## Notes
 - Website files live in `app/`. Edit them, then rebuild.
-- Installer icon / app icon: `build/icon.ico` (replace to change branding).
+- Installer icon / app icon: `build/icon.ico`
 - The installer is unsigned, so Windows SmartScreen may warn on first run.
   A code-signing certificate removes the warning.
